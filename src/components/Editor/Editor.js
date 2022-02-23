@@ -13,20 +13,22 @@ export const Editor = (props) => {
     onChange(value);
   };
   return (
-    <div className="editor-container">
-      <div className="editor-title">{displayName}</div>
-      <ControlledEditor
-        onBeforeChange={handleChange}
-        value={value}
-        className="code-mirror-wrapper"
-        options={{
-          lineWrapping: true,
-          lint: true,
-          mode: language,
-          theme: "material",
-          lineNumbers: true,
-        }}
-      />
+    <div className="h-[100%] bg-blue-500 flex flex-col">
+      <div className="basis-auto h-[10%]">{displayName}</div>
+      <div className="basis-auto h-[100%]">
+        <ControlledEditor
+          onBeforeChange={handleChange}
+          value={value}
+          className="h-[100%]"
+          options={{
+            lineWrapping: true,
+            lint: true,
+            mode: language,
+            theme: "material",
+            lineNumbers: true,
+          }}
+        />
+      </div>
     </div>
   );
 };
