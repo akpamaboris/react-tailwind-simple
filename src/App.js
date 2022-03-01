@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Editor } from "./components/Editor/Editor";
+import tailwindScript from "./tailwind.23";
 
 function App() {
   const [html, setHtml] = useState("");
@@ -10,14 +11,14 @@ function App() {
       setSrcDoc(`
       <html>
       <body>${html}</body>
-      <script src="https://cdn.tailwindcss.com"></script>
+      <script src=${tailwindScript}></script>
       </html>`);
     }, 250);
     return () => clearTimeout(timeout);
   }, [html]);
   return (
     <>
-      <h1 class="text-6xl text-center font-normal leading-normal mt-0 mb-2 ">
+      <h1 className="mt-0 mb-2 text-6xl font-normal leading-normal text-center ">
         TailwindCSS Playground Simplified
       </h1>
       <div className="w-[95%] h-[700px] mt-10  ml-auto mr-auto">
