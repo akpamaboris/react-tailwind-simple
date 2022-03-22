@@ -43,25 +43,46 @@ function App() {
           </div>
         </div>
       </div>
-      <section class="py-16">
-        <div class="container px-4 mx-auto">
-          <div class="max-w-lg mx-auto text-center">
-            <h2 class="my-3 text-3xl md:text-4xl font-bold font-heading">
+      <div className="flex w-[95%]  mt-10  ml-auto mr-auto">
+        <button
+          className="px-4 py-2 ml-3 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+          onClick={() => {
+            setHtml(
+              `<div class="illustration absolute top-[100px] left-[200px]"> <div class="face bg-[#fcba03] h-[400px] w-[400px] rounded-[100%] "> <div           class="mouth absolute bg-[#4f2103] w-[215px] h-[90px] rounded-tl-[7px] rounded-tr-[7px] rounded-br-[100px] rounded-bl-[100px] top-[250px] left-[90px]"></div> <div class="eye-section w-[285px] h-[100px] absolute top-[70px] left-[70px]" > <div class="left-eye bg-[#4f2103] w-[52px] h-[60px] absolute top-[25px] rounded-[50px] before:content-[''] before:block before:bg-[#FFFFFF] before:w-[23px] before:h-[23px] before:absolute before:top-[20px] before:left-[10px] before:rounded-[100px]"></div><div class="right-eye bg-[#4f2103] w-[52px] h-[60px] absolute top-[25px] rounded-[50px] right-[10px] before:content-[''] before:block before:bg-[#FFFFFF] before:w-[23px] before:h-[23px] before:absolute before:top-[20px] before:left-[10px] before:rounded-[100px]" ></div>   </div> </div>  </div>  `
+            );
+          }}
+        >
+          Add a smiley 🙂
+        </button>
+
+        <button
+          onClick={() => {
+            setHtml("");
+          }}
+          className="px-4 py-2 ml-3 font-bold text-white bg-blue-500 rounded hover:bg-blue-700"
+        >
+          reset
+        </button>
+      </div>
+      <section className="py-16">
+        <div className="container px-4 mx-auto">
+          <div className="max-w-lg mx-auto text-center">
+            <h2 className="my-3 text-3xl font-bold md:text-4xl font-heading">
               By Boris Akpama{" "}
             </h2>
-            <p class="text-blueGray-400 leading-relaxed">
+            <p className="leading-relaxed text-blueGray-400">
               Contact Me for more.
             </p>
-            <div class="mt-8">
+            <div className="mt-8">
               <a
-                class="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded"
+                className="block px-8 py-4 mb-4 text-xs font-semibold leading-none text-center text-white bg-blue-600 rounded sm:inline-block sm:mb-0 sm:mr-3 hover:bg-blue-700"
                 href="https://www.linkedin.com/in/borisakpama/"
                 data-removed="true"
               >
                 LinkedIn
               </a>
               <a
-                class="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded"
+                className="block px-8 py-4 text-xs font-semibold leading-none text-center bg-white border rounded sm:inline-block text-blueGray-500 hover:text-blueGray-600 border-blueGray-200 hover:border-blueGray-300"
                 href="https://github.com/akpamaboris"
                 data-removed="true"
               >
